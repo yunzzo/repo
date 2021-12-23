@@ -13,7 +13,7 @@ import EditScreen from './EditScreen';
 //<Image source={require('../images/초대하기_무색.svg')} style={{width:30, height:30}} />
 //<Image source={require('../images/삭제하기_무색.svg')} style={{width:30, height:30}}/>
 
-const InviteDeleteModal =(props) => {
+const EditDeleteModal =(props) => {
 
     //삭제, 초대 버튼 클릭 시 색 바뀌게, 기본 값 회색, 
     let inviteIcon=<MaterialIcons name="local-post-office" size={24} color="gray" />;
@@ -119,4 +119,4 @@ const styles=StyleSheet.create({
     },
 });
 
-export default InviteDeleteModal; 
+export default EditDeleteModal; 

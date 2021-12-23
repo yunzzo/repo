@@ -206,28 +206,28 @@ function Type(){
                             backgroundColor: clickedState1 ? 'blue' : 'white'
                         }]}
                         onPress={clickedButtonHandler1}
-                    ><Text style={{ color: clickedState1 ? 'white' : 'blue' }}>만남</Text>
+                    ><Text style={{ textAlign: "center", color: clickedState1 ? 'white' : 'blue' }}>만남</Text>
                     </Pressable>
                     <Pressable
                         style={[styles.groupButton, {
                             backgroundColor: clickedState2 ? 'blue' : 'white'
                         }]}
                         onPress={clickedButtonHandler2}
-                    ><Text style={{ color: clickedState2 ? 'white' : 'blue' }}>문자/톡</Text>
+                    ><Text style={{ textAlign: "center",color: clickedState2 ? 'white' : 'blue' }}>문자/톡</Text>
                     </Pressable>
                     <Pressable
                         style={[styles.groupButton, {
                             backgroundColor: clickedState3 ? 'blue' : 'white'
                         }]}
                         onPress={clickedButtonHandler3}
-                    ><Text style={{ color: clickedState3 ? 'white' : 'blue' }}>통화</Text>
+                    ><Text style={{ textAlign: "center",color: clickedState3 ? 'white' : 'blue' }}>통화</Text>
                     </Pressable>
                     <Pressable
                         style={[styles.groupButton, {
                             backgroundColor: clickedState4 ? 'blue' : 'white'
                         }]}
                         onPress={clickedButtonHandler4}
-                    ><Text style={{ color: clickedState4 ? 'white' : 'blue' }}>메일</Text>
+                    ><Text style={{textAlign: "center", color: clickedState4 ? 'white' : 'blue' }}>메일</Text>
                     </Pressable>
                 </View>
                 <View style={styles.buttonContainer}>
@@ -236,28 +236,28 @@ function Type(){
                             backgroundColor: clickedState5 ? 'blue' : 'white'
                         }]}
                         onPress={clickedButtonHandler5}
-                    ><Text style={{ color: clickedState5 ? 'white' : 'blue' }}>학교</Text>
+                    ><Text style={{ textAlign: "center",color: clickedState5 ? 'white' : 'blue' }}>학교</Text>
                     </Pressable>
                     <Pressable
                         style={[styles.groupButton, {
                             backgroundColor: clickedState6 ? 'blue' : 'white'
                         }]}
                         onPress={clickedButtonHandler6}
-                    ><Text style={{ color: clickedState6 ? 'white' : 'blue' }}>회사</Text>
+                    ><Text style={{ textAlign: "center",color: clickedState6 ? 'white' : 'blue' }}>회사</Text>
                     </Pressable>
                     <Pressable
                         style={[styles.groupButton, {
                             backgroundColor: clickedState7 ? 'blue' : 'white'
                         }]}
                         onPress={clickedButtonHandler7}
-                    ><Text style={{ color: clickedState7 ? 'white' : 'blue' }}>식당</Text>
+                    ><Text style={{ textAlign: "center",color: clickedState7 ? 'white' : 'blue' }}>식당</Text>
                     </Pressable>
                     <Pressable
                         style={[styles.groupButton, {
                             backgroundColor: clickedState8 ? 'blue' : 'white'
                         }]}
                         onPress={clickedButtonHandler8}
-                    ><Text style={{ color: clickedState8 ? 'white' : 'blue' }}>카페</Text>
+                    ><Text style={{ textAlign: "center",color: clickedState8 ? 'white' : 'blue' }}>카페</Text>
                     </Pressable>
                 </View>
                 <View style={styles.buttonContainer}>
@@ -266,21 +266,21 @@ function Type(){
                             backgroundColor: clickedState9 ? 'blue' : 'white'
                         }]}
                     onPress={clickedButtonHandler9}
-                    ><Text style={{ color: clickedState9 ? 'white' : 'blue' }}>파티</Text>
+                    ><Text style={{ textAlign: "center",color: clickedState9 ? 'white' : 'blue' }}>파티</Text>
                     </Pressable>
                     <Pressable
                         style={[styles.groupButton, {
                             backgroundColor: clickedState10 ? 'blue' : 'white'
                         }]}
                         onPress={clickedButtonHandler10}
-                    ><Text style={{ color: clickedState10 ? 'white' : 'blue' }}>번개</Text>
+                    ><Text style={{ textAlign: "center",color: clickedState10 ? 'white' : 'blue' }}>번개</Text>
                     </Pressable>
                     <Pressable
                         style={[styles.groupButton, {
                             backgroundColor: clickedState11 ? 'blue' : 'white'
                         }]}
                         onPress={clickedButtonHandler11}
-                    ><Text style={{ color: clickedState11 ? 'white' : 'blue' }}>기타</Text>
+                    ><Text style={{ textAlign: "center",color: clickedState11 ? 'white' : 'blue' }}>기타</Text>
                     </Pressable>
                     <Pressable
                         style={[styles.groupButton, {
@@ -321,11 +321,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'blue',
         borderRadius: 20,
-        paddingLeft: 8,
-        width: 56,
+        marginTop: 8,
+        width: 60,
         height: 32,
         fontSize: 10,
-        marginLeft: 10,
     },
 });
 

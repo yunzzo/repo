@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button ,Image, StyleSheet, TextInput, View, Text, Platform } from 'react-native';
+import { ScrollView,Button ,Image, StyleSheet, TextInput, View, Text, Platform } from 'react-native';
 import { TouchableOpacity,Keyboard, KeyboardAvoidingView, TouchableWithoutFeedback} from 'react-native';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import Type from "./Type"
@@ -95,12 +95,24 @@ function EditScreen(props){
     //detailScreen
     const [detailScreen, setDetailScreen] = useState(false);
 
+
+  //저장 버튼 눌렀을 떄
+  const saveHandler = () => {
+    //array 업데이트
+     props.historyArray.push({date:text, key: (props.historyArray.length +1).toString(), content:txt, tag:tag, image:image});
+     props.detail(props.historyArray)
+    //페이지이동 마지막 
+    console.log(props.historyArray)
+    setDetailScreen(true)
+  }
     if (detailScreen) {
-      return (<DetailScreen donBack={setDetailScreen} 
-        tag = {tag} place = {place} img = {image} content = {txt} date={text}/>)
+      return (<DetailScreen goback = {props.goback} donBack={setDetailScreen} 
+      detail={props.detail} historyArray={props.historyArray}
+      />)
     }
 
     return (
+      <ScrollView contentContainerStyle={{flexGrow:1}}>
             <View style={styles.container}>
             <View style={styles.header}>
             <View style={styles.title}>
@@ -108,11 +120,11 @@ function EditScreen(props){
               name="chevron-back-outline" 
               size={24} 
               color="black"
-              onPress= {() => props.goback  (false)}
+              onPress= {() => props.goback(false)}
               />
               <Text style={{fontSize: 20 , marginLeft:15}}>히스토리</Text>
             </View>
-            <Button onPress={() => setDetailScreen(true)}
+            <Button onPress={saveHandler}
             style={styles.submit} 
             title="저장"
             >
@@ -214,6 +226,7 @@ function EditScreen(props){
              </TouchableWithoutFeedback>
             </KeyboardAvoidingView>
             </View>
+           </ScrollView>
         )
   }
 

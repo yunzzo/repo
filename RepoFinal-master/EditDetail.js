@@ -6,6 +6,8 @@ import Cell from './components/Cell';
 import MBTI from './components/MBTI';
 import Group from './components/Group';
 import RelatedPpl from './components/RelatedPpl';
+import { DetailPage } from './DetailPage'
+
 
 
 //미지

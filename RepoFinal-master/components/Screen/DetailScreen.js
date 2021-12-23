@@ -9,7 +9,6 @@ import Planet from "../images/history_icon_default_2x.png"
 //정보
 function DetailScreen(props) {
     const [isModalVisible, setModalVisible] = useState(false);
-
     return(
         <View styles={styles.container}>
             <View style={styles.header}>
@@ -18,6 +17,7 @@ function DetailScreen(props) {
               name="chevron-back-outline" 
               size={24} 
               color="black"
+              onPress= {() => props.goback(false)}
               />
               <Text style={{fontSize: 20 , marginLeft:15}}>히스토리</Text>
             </View>
@@ -36,13 +36,13 @@ function DetailScreen(props) {
               <Text style = {{
                   fontWeight : "bold",
                   fontSize: 18
-              }}>{props.date}</Text>
+              }}>{props.historyArray[props.historyArray.length-1].date}</Text>
               <Text style={{
                   color: "#5B7DF4",
                   fontWeight : "bold",
                   fontSize: 18,
                   paddingTop : 4,
-                }}>{props.place}</Text>
+                }}>{props.historyArray[props.historyArray.length-1].place}</Text>
              </View>
              <Ionicons size = {20} title = "edit-button" name="ellipsis-vertical-outline" onPress = {()=>setModalVisible(true)}/>
              <EditDeleteModal visible={isModalVisible} goback={props.onBack} />
@@ -50,19 +50,19 @@ function DetailScreen(props) {
 
             <View style={styles.content}>
             <View>
-            {props.img && <Image source={{ uri: props.img }} style={{ width: "100%", height: 300 }} />}
+            {props.historyArray[props.historyArray.length-1].image && <Image source={{ uri: props.historyArray[props.historyArray.length-1].image }} style={{ width: "100%", height: 300 }} />}
             </View>
             <Text style = {{
                 marginTop: 10,
                 fontSize : 16,
                 color : "#9D9D9D",
-            }}>{props.content}</Text>
+            }}>{props.historyArray[props.historyArray.length-1].content}</Text>
             <Text style = {{
                 color:"#5B7DF4",
                 marginTop: 10,
                 fontSize:15,
                 fontWeight: "bold",
-            }}> {props.tag}</Text>
+            }}> {props.historyArray[props.historyArray.length-1].tag}</Text>
             </View>
         </View>
 
